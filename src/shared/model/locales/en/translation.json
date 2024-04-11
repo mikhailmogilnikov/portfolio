@@ -1,0 +1,19 @@
+{
+  "title": "Mikhail Mogilnikov",
+  "description": "",
+  "theme": {
+    "title": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "title": "Language"
+  },
+  "socials": "Socials",
+  "contact": "Contact me",
+  "tabs": {
+    "projects": "Projects",
+    "about": "About me"
+  }
+}
