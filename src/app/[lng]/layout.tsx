@@ -11,7 +11,7 @@ import {
 import './globals.css';
 import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 type MetadataProps = {
   params: { lng: string };

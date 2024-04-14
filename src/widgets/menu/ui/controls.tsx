@@ -238,7 +238,7 @@ export const MenuControls = ({ setIsOpened }: Props) => {
                 onClick={handleClick}
                 className='flex flex-col h-min gap-5 items-end'
               >
-                <AnimatePresence>
+                <AnimatePresence mode='popLayout'>
                   {selectedControl === ESelectedControls.LANGUAGE && (
                     <m.div
                       layout

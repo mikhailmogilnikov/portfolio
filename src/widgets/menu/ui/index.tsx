@@ -26,10 +26,6 @@ export const Menu = () => {
   const router = useRouter();
   const [_cookie, setCookie] = useCookies();
 
-  router.prefetch('/about');
-  router.prefetch('/socials');
-  router.prefetch('/contact');
-
   const [scaleSize, setScaleSize] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
@@ -41,6 +37,11 @@ export const Menu = () => {
   }, [isMounted, isOpened]);
 
   useEffect(() => {
+    router.prefetch('/');
+    router.prefetch('/about');
+    router.prefetch('/socials');
+    router.prefetch('/contact');
+    
     setCookie('theme', 'dark', { expires: new Date() });
 
     if (resolvedTheme === 'light') {
