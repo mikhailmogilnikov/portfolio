@@ -9,7 +9,7 @@ export const ProjectsList = async ({ lng }: Props) => {
   const projects = await getProjects(lng);
 
   return (
-    <div className='w-full h-min flex flex-col gap-8 xl:gap-24'>
+    <div className='w-full h-min flex flex-col gap-16 xl:gap-24'>
       {projects.map((project) => (
         <Project key={project.id} data={project} />
       ))}
