@@ -24,7 +24,7 @@ i18next
   .use(
     resourcesToBackend(
       (language: string, namespace: string) =>
-        import(`../model/locales/${language}/${namespace}.json`),
+        import(`./locales/${language}/${namespace}.json`),
     ),
   )
   // .use(LocizeBackend) // locize backend could be used on client side, but prefer to keep it in sync with server side

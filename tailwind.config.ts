@@ -11,8 +11,18 @@ const config: Config = {
       borderRadius: {
         '4xl': '2rem',
       },
+      boxShadow: {
+        base: '2px 4px 12px #00000014',
+        hover: '2px 4px 16px #00000029',
+      },
       animation: {
         preloaderPulse: 'preloadPulse 2s linear infinite',
+      },
+      maxWidth: {
+        '8xl': '1440px',
+      },
+      transitionProperty: {
+        'transform-shadow': 'transform, box-shadow',
       },
       keyframes: {
         preloadPulse: {
@@ -32,8 +42,12 @@ const config: Config = {
       themes: {
         light: {
           colors: {
+            background: '#f5f5f7',
+            foreground: '#11181C',
+            divider: 'rgba(17, 17, 17, 0.15)',
+            focus: '#11181C',
             default: {
-              DEFAULT: 'rgb(244, 244, 245)',
+              DEFAULT: '#ffffff',
               foreground: '#000000',
             },
             primary: {
@@ -50,13 +64,16 @@ const config: Config = {
             },
             success: {
               DEFAULT: 'rgb(58, 171, 64)',
-              foreground: 'white',
+              foreground: '#ffffff',
             },
-            focus: 'rgb(0, 82, 204)',
           },
         },
         dark: {
           colors: {
+            background: '#000000',
+            foreground: '#ECEDEE',
+            focus: '#ECEDEE',
+            divider: 'rgba(255, 255, 255, 0.15)',
             default: {
               DEFAULT: 'rgb(39, 39, 42)',
               foreground: '#ffffff',
@@ -78,7 +95,6 @@ const config: Config = {
               DEFAULT: 'rgb(58, 171, 64)',
               foreground: 'white',
             },
-            focus: 'white',
           },
         },
       },

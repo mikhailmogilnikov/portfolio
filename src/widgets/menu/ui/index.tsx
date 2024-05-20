@@ -41,7 +41,7 @@ export const Menu = () => {
     router.prefetch('/about');
     router.prefetch('/socials');
     router.prefetch('/contact');
-    
+
     setCookie('theme', 'dark', { expires: new Date() });
 
     if (resolvedTheme === 'light') {

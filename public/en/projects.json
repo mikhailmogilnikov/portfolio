@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "name": "Albomoni",
+    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
+    "video": "",
+    "images": []
+  },
+  {
+    "id": 1,
+    "name": "Minerals museum",
+    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
+    "video": "",
+    "images": []
+  }
+]

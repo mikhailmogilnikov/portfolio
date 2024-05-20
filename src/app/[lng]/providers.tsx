@@ -14,7 +14,7 @@ const Providers = ({ children, lng }: Props) => (
   <FramerMotionProvider features={domMax}>
     <LanguageProvider lng={lng}>
       <NextUIProvider>
-        <ThemeProvider attribute='class' defaultTheme='system'>
+        <ThemeProvider attribute='class' defaultTheme='light'>
           {children}
         </ThemeProvider>
       </NextUIProvider>

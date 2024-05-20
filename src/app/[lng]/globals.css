@@ -3,31 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --text: #000000;
-  --inv-text: #ffffff;
-  --accent: rgb(0, 82, 204);
-  --bg: #ffffff;
-  --bg-light: #f3f3f3;
   --scrollbar: #c0c0c0;
-  --element-hover: rgb(241, 241, 241);
 }
 
 [class='dark'] {
-  --text: #ffffff;
-  --inv-text: #000000;
-  --accent: rgb(0, 82, 204);
-  --bg: #000000;
-  --bg-light: #141414;
   --scrollbar: #2b2b2b;
-  --element: rgb(39, 39, 42);
-  --element-hover: rgb(47, 47, 50);
 }
 
-html,
+/* html,
 body {
   color: var(--text);
   background: var(--bg);
-}
+} */
 
 body {
   width: 100%;

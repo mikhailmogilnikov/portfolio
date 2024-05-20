@@ -1,0 +1,20 @@
+[
+  {
+    "id": "albomoni",
+    "name": "Albomoni",
+    "short_description": "Сервис размещения объявлений, аналог Avito для зарубежных стран.",
+    "description": "",
+    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
+    "video": "",
+    "images": []
+  },
+  {
+    "id": "minerals-museum",
+    "name": "Минералогический музей",
+    "short_description": "Справочник горных пород с 3D визуализацией.",
+    "description": "",
+    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
+    "video": "",
+    "images": []
+  }
+]

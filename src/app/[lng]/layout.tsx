@@ -51,7 +51,11 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
       </head>
       <body className={inter.className}>
         <Providers lng={lng}>
-          <MenuWrapper>{children}</MenuWrapper>
+          <MenuWrapper>
+            <main className='w-full h-min min-h-screen flex flex-col gap-12 md:gap-20 items-center p-4 md:p-8 py-10 md:py-12 xl:py-24 !pb-40 max-w-8xl mx-auto overflow-x-hidden'>
+              {children}
+            </main>
+          </MenuWrapper>
         </Providers>
       </body>
     </html>
