@@ -47,7 +47,6 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
   return (
     <html suppressHydrationWarning className='dark' lang={lng} dir={dir(lng)}>
       <head>
-        <link rel='icon' href='/favicon.ico' sizes='any' />
         <meta name='theme-color' content='#000000' />
       </head>
       <body className={inter.className}>
