@@ -1,11 +1,10 @@
-import { promises as fs } from 'fs';
-import { ProjectType } from '../model/types/project.type';
-
 export const getProjects = async (locale: string) => {
-  const resp = fs.readFile(
-    `${process.cwd()}/public/${locale}/projects.json`,
-    'utf8',
-  );
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl}/${locale}/projects.json`);
 
-  return JSON.parse(await resp) as ProjectType[];
+  if (!res.ok) {
+    return [];
+  }
+
+  return res.json();
 };
