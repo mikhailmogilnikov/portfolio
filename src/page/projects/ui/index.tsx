@@ -8,5 +8,7 @@ type Props = {
 export const ProjectsPage = ({ lng, searchParams }: Props) => {
   const { project } = searchParams;
 
-  return <ProjectsList lng={lng} activeProject={project as string} />;
+  return (
+    <ProjectsList lng={lng} activeProject={project as string | undefined} />
+  );
 };

@@ -1,4 +1,5 @@
-import { ExpandedCard, Project } from '@mikhailmogilnikov/entities/project';
+import { Project } from '@mikhailmogilnikov/entities/project';
+import { ExpandedCard } from '@mikhailmogilnikov/entities/project/ui/expaned-card';
 import { getProjects } from '@mikhailmogilnikov/shared/api/get-projects';
 
 type Props = {

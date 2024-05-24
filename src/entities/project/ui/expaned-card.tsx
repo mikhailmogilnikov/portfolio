@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, m, useWillChange } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { PiXBold } from 'react-icons/pi';
 import { RemoveScroll } from 'react-remove-scroll';
@@ -12,7 +12,6 @@ type Props = {
 
 export const ExpandedCard = ({ project }: Props) => {
   const router = useRouter();
-  const willChange = useWillChange();
 
   const handleClose = () => {
     router.push('/', { scroll: false });
@@ -23,7 +22,6 @@ export const ExpandedCard = ({ project }: Props) => {
       {project && (
         <RemoveScroll className='fixed z-50'>
           <m.div
-            style={{ willChange }}
             className='fixed inset-0 bg-background z-[70] px-4 md:px-8 shadow-base overflow-y-scroll'
             layoutId={`${project.id}_wrapper`}
           >
