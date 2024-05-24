@@ -4,8 +4,9 @@ type Props = {
   params: {
     lng: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function Projects({ params: { lng } }: Props) {
-  return <ProjectsPage lng={lng} />;
+export default async function Projects({ params, searchParams }: Props) {
+  return <ProjectsPage lng={params.lng} searchParams={searchParams} />;
 }

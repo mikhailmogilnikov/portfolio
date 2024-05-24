@@ -1,21 +1,19 @@
 'use client';
 
 import { m } from 'framer-motion';
-import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
-import { ExpandedCard } from './expaned-card';
 
 type Props = {
   data: ProjectType;
 };
 
 export const Project = ({ data }: Props) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleExpand = () => {
-    if (!isExpanded) {
-      setIsExpanded(true);
-    }
+    router.push(`${pathname}?project=${data.id}`, { scroll: false });
   };
 
   return (
@@ -38,12 +36,6 @@ export const Project = ({ data }: Props) => {
           {data.short_description}
         </p>
       </m.div>
-
-      <ExpandedCard
-        data={data}
-        isExpanded={isExpanded}
-        setIsExpanded={setIsExpanded}
-      />
     </m.button>
   );
 };
