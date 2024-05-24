@@ -65,13 +65,11 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
           sizes='16x16'
           href='/assets/favicon/favicon-16x16.png'
         />
-        <link rel='manifest' href='/assets/favicon/site.webmanifest' />
         <link
           rel='mask-icon'
           href='/assets/favicon/safari-pinned-tab.svg'
           color='#000000'
         />
-        <link rel='shortcut icon' href='/assets/favicon/favicon.ico' />
         <meta name='msapplication-TileColor' content='#c2dbff' />
         <meta
           name='msapplication-config'
