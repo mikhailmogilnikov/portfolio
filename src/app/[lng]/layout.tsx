@@ -48,23 +48,6 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
     <html suppressHydrationWarning className='dark' lang={lng} dir={dir(lng)}>
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-icon?assets/favicon/apple-touch-icon.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/icon?assets/favicon/favicon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/icon?assets/favicon/favicon-16x16.png'
-        />
         <meta name='theme-color' content='#000000' />
       </head>
       <body className={inter.className}>
