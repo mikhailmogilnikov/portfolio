@@ -1,6 +1,5 @@
 import { useTranslation } from '@mikhailmogilnikov/shared/i18n';
 import { Tabs } from '@mikhailmogilnikov/shared/ui/tabs/ui';
-import { GooeyBg } from '@mikhailmogilnikov/widgets/gooey';
 import { HomeRoutes } from '../config/home-routes';
 
 type Props = {
@@ -19,10 +18,6 @@ export const HomePage = async ({ lng, children }: Props) => {
 
       <div className='w-full flex justify-start z-10'>
         <Tabs items={HomeRoutes} />
-      </div>
-
-      <div className='absolute -right-[15vw] top-10 w-2/3'>
-        <GooeyBg />
       </div>
 
       {children}
