@@ -1,11 +1,19 @@
 import { Project } from '@mikhailmogilnikov/entities/project';
-import { ExpandedCard } from '@mikhailmogilnikov/entities/project/ui/expaned-card';
 import { getProjects } from '@mikhailmogilnikov/shared/api/get-projects';
+import dynamic from 'next/dynamic';
 
 type Props = {
   lng: string;
   activeProject: string | undefined;
 };
+
+const DynamicExpandedCard = dynamic(
+  () =>
+    import('@mikhailmogilnikov/entities/project/ui/expaned-card').then(
+      (mod) => mod.ExpandedCard,
+    ),
+  { ssr: false },
+);
 
 export const ProjectsList = async ({ lng, activeProject }: Props) => {
   const projects = await getProjects(lng);
@@ -16,7 +24,8 @@ export const ProjectsList = async ({ lng, activeProject }: Props) => {
       {projects.map((project) => (
         <Project key={project.id} data={project} />
       ))}
-      <ExpandedCard project={currentProject} />
+
+      <DynamicExpandedCard project={currentProject} />
     </div>
   );
 };

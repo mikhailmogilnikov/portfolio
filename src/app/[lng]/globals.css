@@ -10,11 +10,10 @@
   --scrollbar: #2b2b2b;
 }
 
-/* html,
+html,
 body {
-  color: var(--text);
-  background: var(--bg);
-} */
+  overflow-x: hidden;
+}
 
 body {
   width: 100%;
