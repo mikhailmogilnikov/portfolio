@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@nextui-org/button';
+import { Button } from '@mikhailmogilnikov/shared/ui/(buttons)/button/ui';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { PiWarningCircle } from 'react-icons/pi';
@@ -21,15 +21,17 @@ export default function Error({
       </h2>
 
       <div className='w-full flex flex-col gap-4 max-w-96'>
-        <Button size='lg' onClick={() => window.location.reload()}>
+        <Button color='primary' onPress={() => window.location.reload()}>
           Перезагрузить страницу
         </Button>
-        <Button size='lg' onClick={() => router.push('/')}>
-          На главную
-        </Button>
+        <Button onPress={() => router.push('/')}>На главную</Button>
       </div>
 
-      <Button size='sm' onClick={() => setIsExpanded(!isExpanded)}>
+      <Button
+        size='sm'
+        variant='flat'
+        onPress={() => setIsExpanded(!isExpanded)}
+      >
         Подробности
       </Button>
 

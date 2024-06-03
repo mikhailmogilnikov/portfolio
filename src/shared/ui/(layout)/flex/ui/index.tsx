@@ -8,6 +8,8 @@ type Props = {
   gap?: number;
   width?: number | string;
   editable?: boolean;
+  wrap?: boolean;
+  col?: boolean;
 };
 
 export const Flex = ({
@@ -15,16 +17,22 @@ export const Flex = ({
   className,
   tag = 'div',
   direction = 'row',
-  gap = 16,
+  gap = 4,
   width = '100%',
   editable = false,
+  wrap = false,
+  col = false,
 }: Props) => {
   const Tag = tag;
 
   return (
     <Tag
-      style={!editable ? { flexDirection: direction, gap, width } : undefined}
-      className={`flex ${className}`}
+      style={
+        !editable
+          ? { flexDirection: col ? 'column' : direction, gap: gap * 4, width }
+          : undefined
+      }
+      className={`flex ${className} ${wrap && 'flex-wrap'}`}
     >
       {children}
     </Tag>

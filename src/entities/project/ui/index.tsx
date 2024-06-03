@@ -3,6 +3,8 @@
 import { m } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
+import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
+import { PiCaretRightBold } from 'react-icons/pi';
 
 type Props = {
   data: ProjectType;
@@ -21,6 +23,7 @@ export const Project = ({ data }: Props) => {
       type='button'
       initial={{ y: 150, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ margin: '100px 0px 0px 0px' }}
       transition={{ ease: [0, 1, 0, 1], duration: 1 }}
       onClick={handleExpand}
       className='w-full h-min flex flex-col gap-6 lg:gap-8 text-start'
@@ -34,7 +37,13 @@ export const Project = ({ data }: Props) => {
         layoutId={`${data.id}_title`}
         className='w-full flex flex-col gap-2 z-20'
       >
-        <h3 className='text-2xl lg:text-3xl font-bold'>{data.name}</h3>
+        <Flex className='justify-between items-center'>
+          <h3 className='text-2xl lg:text-3xl font-bold'>{data.name}</h3>
+          <div className='w-8 h-8 bg-default flex justify-center items-center rounded-full'>
+            <PiCaretRightBold size={20} />
+          </div>
+        </Flex>
+
         <p className='md:text-lg font-medium opacity-50'>
           {data.short_description}
         </p>
