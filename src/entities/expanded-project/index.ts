@@ -1,0 +1,1 @@
+export { ExpandedProject } from './ui';

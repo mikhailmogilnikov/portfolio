@@ -7,12 +7,10 @@ type Props = {
   activeProject: string | undefined;
 };
 
-const DynamicExpandedCard = dynamic(
-  () =>
-    import('@mikhailmogilnikov/entities/project/ui/expaned-card').then(
-      (mod) => mod.ExpandedCard,
-    ),
-  { ssr: false },
+const DynamicExpandedProject = dynamic(() =>
+  import('@mikhailmogilnikov/entities/expanded-project').then(
+    (mod) => mod.ExpandedProject,
+  ),
 );
 
 export const ProjectsList = async ({ lng, activeProject }: Props) => {
@@ -25,7 +23,7 @@ export const ProjectsList = async ({ lng, activeProject }: Props) => {
         <Project key={project.id} data={project} />
       ))}
 
-      <DynamicExpandedCard project={currentProject} />
+      <DynamicExpandedProject project={currentProject} />
     </div>
   );
 };

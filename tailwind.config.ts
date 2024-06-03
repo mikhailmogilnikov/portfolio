@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-sm': { max: '639px' },
+        'max-md': { max: '767px' },
+        'max-lg': { max: '1023px' },
+      },
       borderRadius: {
         '4xl': '2rem',
       },
