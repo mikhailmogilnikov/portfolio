@@ -9,6 +9,8 @@ import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
 import { ExpandedProjectGallery } from './gallery';
+import { ActionButtons } from './action-buttons';
+import { TechnologiesList } from './technologies';
 
 type Props = {
   project: ProjectType | undefined;
@@ -45,8 +47,8 @@ export const ExpandedProject = ({ project }: Props) => {
                 exit='enter'
                 className='mt-4 flex flex-col gap-8'
               >
-                {/* <ActionButtons href={project.href} github={project.github} />
-                <TechnologiesList technologies={project.technologies} /> */}
+                <ActionButtons href={project.href} github={project.github} />
+                <TechnologiesList technologies={project.technologies} />
                 <ExpandedProjectTimeInfo />
                 <ExpandedProjectGallery items={project.gallery} />
               </m.section>
