@@ -7,7 +7,7 @@ import {
   fallbackLng,
   languages,
 } from '@mikhailmogilnikov/shared/i18n/settings';
-import { Lightbox } from '@mikhailmogilnikov/widgets/lightbox';
+import dynamic from 'next/dynamic';
 import './globals.css';
 import Providers from './providers';
 
@@ -43,6 +43,14 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const DynamicLightbox = dynamic(
+  () =>
+    import('@mikhailmogilnikov/widgets/lightbox').then((mod) => mod.Lightbox),
+  {
+    ssr: false,
+  },
+);
+
 export default async function RootLayout({
   children,
   params: { lng },
@@ -54,8 +62,8 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers lng={lng}>
+          <DynamicLightbox />
           <main className='w-full h-min min-h-screen flex flex-col gap-12 md:gap-20 items-center p-4 md:p-8 py-10 md:py-12 xl:py-24 !pb-40 max-w-8xl mx-auto overflow-x-hidden'>
-            <Lightbox />
             {children}
           </main>
         </Providers>

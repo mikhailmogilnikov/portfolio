@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 
 import { createSlice } from '@reduxjs/toolkit';
-import { TGalleryItem } from './types/project.type';
+import { TGalleryItem } from '../../../shared/model/types/project.type';
 
 const initialState: { gallery: TGalleryItem[] | null } = {
   gallery: null,
