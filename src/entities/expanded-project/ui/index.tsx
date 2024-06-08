@@ -5,8 +5,6 @@ import { RemoveScroll } from 'react-remove-scroll';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
-import { TechnologiesList } from './technologies';
-import { ActionButtons } from './action-buttons';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
@@ -47,8 +45,8 @@ export const ExpandedProject = ({ project }: Props) => {
                 exit='enter'
                 className='mt-4 flex flex-col gap-8'
               >
-                <ActionButtons href={project.href} github={project.github} />
-                <TechnologiesList technologies={project.technologies} />
+                {/* <ActionButtons href={project.href} github={project.github} />
+                <TechnologiesList technologies={project.technologies} /> */}
                 <ExpandedProjectTimeInfo />
                 <ExpandedProjectGallery items={project.gallery} />
               </m.section>
