@@ -1,27 +1,22 @@
 'use client';
 
 import { AnimatePresence, m } from 'framer-motion';
-import { useRouter } from 'next/navigation';
 import { RemoveScroll } from 'react-remove-scroll';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
-import { Button } from '@mikhailmogilnikov/shared/ui/(buttons)/button/ui';
-import { PiGithubLogoBold, PiGlobeSimpleBold } from 'react-icons/pi';
-import { Text } from '@mikhailmogilnikov/shared/ui/(layout)/text';
-import { Chip } from '@nextui-org/react';
+import { TechnologiesList } from './technologies';
+import { ActionButtons } from './action-buttons';
+import { ExpandedProjectSectionVariants } from '../config/animation-variants';
+import { ExpandedProjectTitle } from './title';
+import { ExpandedProjectTimeInfo } from './time-info';
+import { ExpandedProjectGallery } from './gallery';
 
 type Props = {
   project: ProjectType | undefined;
 };
 
 export const ExpandedProject = ({ project }: Props) => {
-  const router = useRouter();
-
-  const handleClose = () => {
-    router.back();
-  };
-
   return (
     <AnimatePresence>
       {project && (
@@ -31,75 +26,32 @@ export const ExpandedProject = ({ project }: Props) => {
             layoutId={`${project.id}_wrapper`}
           >
             <Flex
+              tag='main'
               direction='column'
               className='max-w-8xl px-4 md:px-8 pb-16 box-border mx-auto'
             >
-              <CloseButton
-                onPress={handleClose}
-                className='fixed top-4 right-4 md:top-6 md:right-6'
-              />
-              <div className='w-full h-[50vh]' />
-              <m.div
-                layoutId={`${project.id}_title`}
-                className='w-full flex flex-col gap-2 z-20 max-w-8xl mx-auto'
-              >
-                <h3 className='text-2xl lg:text-3xl font-bold'>
-                  {project.name}
-                </h3>
-                <p className='md:text-lg font-medium opacity-50'>
-                  {project.short_description}
-                </p>
-              </m.div>
+              <CloseButton className='fixed top-4 right-4 md:top-6 md:right-6' />
 
-              <m.div
-                initial={{ opacity: 0, y: 100 }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    delay: 0.2,
-                    type: 'spring',
-                    damping: 26,
-                    stiffness: 300,
-                  },
-                  y: 0,
-                }}
-                exit={{ opacity: 0, y: 100 }}
+              <div className='w-full h-[50vh] lg:h-[70vh]' />
+
+              <ExpandedProjectTitle
+                id={project.id}
+                name={project.name}
+                description={project.short_description}
+              />
+
+              <m.section
+                variants={ExpandedProjectSectionVariants}
+                initial='enter'
+                animate='animate'
+                exit='enter'
                 className='mt-4 flex flex-col gap-8'
               >
-                <Flex
-                  tag='section'
-                  editable
-                  className='gap-4 lg:gap-8 max-md:flex-col'
-                >
-                  <Button
-                    streched
-                    color='primary'
-                    external
-                    icon={<PiGlobeSimpleBold size={20} />}
-                  >
-                    Посетить сайт
-                  </Button>
-                  <Button
-                    streched
-                    shadow
-                    external
-                    icon={<PiGithubLogoBold size={20} />}
-                  >
-                    Открыть репозиторий
-                  </Button>
-                </Flex>
-
-                <Flex col>
-                  <Text opacity={0.5}>Технологии</Text>
-                  <Flex wrap gap={3}>
-                    {project.technologies.map((tech) => (
-                      <Chip size='lg' classNames={{ content: 'font-medium' }}>
-                        {tech}
-                      </Chip>
-                    ))}
-                  </Flex>
-                </Flex>
-              </m.div>
+                <ActionButtons href={project.href} github={project.github} />
+                <TechnologiesList technologies={project.technologies} />
+                <ExpandedProjectTimeInfo />
+                <ExpandedProjectGallery items={project.gallery} />
+              </m.section>
             </Flex>
           </m.div>
         </RemoveScroll>

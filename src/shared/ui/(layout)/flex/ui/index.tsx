@@ -2,7 +2,16 @@ import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  tag?: 'div' | 'section' | 'menu' | 'aside' | 'header' | 'footer' | 'span';
+  tag?:
+    | 'div'
+    | 'section'
+    | 'menu'
+    | 'aside'
+    | 'header'
+    | 'footer'
+    | 'span'
+    | 'article'
+    | 'main';
   className?: string;
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   gap?: number;

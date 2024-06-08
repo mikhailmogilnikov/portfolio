@@ -22,6 +22,7 @@ const config: Config = {
       },
       animation: {
         preloaderPulse: 'preloadPulse 2s linear infinite',
+        appear: 'appear linear',
       },
       maxWidth: {
         '8xl': '1440px',

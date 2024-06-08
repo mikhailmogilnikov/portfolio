@@ -2,12 +2,12 @@
 import { dir } from 'i18next';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { MenuWrapper } from '@mikhailmogilnikov/widgets/menu';
 import { useTranslation } from '@mikhailmogilnikov/shared/i18n';
 import {
   fallbackLng,
   languages,
 } from '@mikhailmogilnikov/shared/i18n/settings';
+import { Lightbox } from '@mikhailmogilnikov/widgets/lightbox';
 import './globals.css';
 import Providers from './providers';
 
@@ -43,7 +43,10 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({ children, params: { lng } }: PageProps) {
+export default async function RootLayout({
+  children,
+  params: { lng },
+}: PageProps) {
   return (
     <html suppressHydrationWarning className='dark' lang={lng} dir={dir(lng)}>
       <head>
@@ -51,11 +54,10 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
       </head>
       <body className={inter.className}>
         <Providers lng={lng}>
-          <MenuWrapper>
-            <main className='w-full h-min min-h-screen flex flex-col gap-12 md:gap-20 items-center p-4 md:p-8 py-10 md:py-12 xl:py-24 !pb-40 max-w-8xl mx-auto overflow-x-hidden'>
-              {children}
-            </main>
-          </MenuWrapper>
+          <main className='w-full h-min min-h-screen flex flex-col gap-12 md:gap-20 items-center p-4 md:p-8 py-10 md:py-12 xl:py-24 !pb-40 max-w-8xl mx-auto overflow-x-hidden'>
+            <Lightbox />
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

@@ -3,18 +3,52 @@
     "id": "albomoni",
     "name": "Albomoni",
     "short_description": "Сервис размещения объявлений, аналог Avito для зарубежных стран.",
+    "href": "https://albomoni.com",
+    "github": "https://github.com/mikhailmogilnikov/albomoni",
+    "technologies": [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Framer Motion",
+      "FSD (Feature Sliced Design)"
+    ],
+    "year": 2024,
+    "dev_months": 2,
     "description": "",
-    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
-    "video": "",
-    "images": []
+    "features": [],
+    "contribution": [],
+    "preview": "",
+    "gallery": [
+      { "url": "1", "aspect": "16/9" },
+      { "url": "2", "aspect": "1/1" },
+      { "url": "3", "aspect": "2/3" },
+      { "url": "4", "aspect": "3/2" },
+      { "url": "5", "aspect": "10/13" },
+      { "url": "6", "aspect": "3/4" },
+      { "url": "7", "aspect": "5/3" }
+    ]
   },
   {
     "id": "minerals-museum",
     "name": "Минералогический музей",
     "short_description": "Справочник горных пород с 3D визуализацией.",
+    "href": "https://minerals-museum.vercel.app",
+    "github": "https://github.com/mikhailmogilnikov/minerals-museum",
+    "technologies": [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "React Three Fiber",
+      "Framer Motion",
+      "FSD (Feature Sliced Design)"
+    ],
+    "year": 2024,
+    "dev_months": 1,
     "description": "",
-    "technologies": ["Next.js", "Typescript", "Tailwind CSS"],
-    "video": "",
-    "images": []
+    "features": [],
+    "contribution": [],
+    "preview": "",
+    "gallery": []
   }
 ]

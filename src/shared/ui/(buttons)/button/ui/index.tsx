@@ -1,53 +1,34 @@
-import { Button as NativeButton } from '@nextui-org/button';
+/* eslint-disable react/jsx-props-no-spreading */
+
+import { Button as NativeButton, ButtonProps } from '@nextui-org/button';
 import { ReactNode } from 'react';
 import { PiArrowUpRightBold } from 'react-icons/pi';
 
 type Props = {
   icon?: ReactNode;
   children: ReactNode;
-  size?: 'sm' | 'md' | 'lg';
-  color?:
-    | 'default'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'warning'
-    | 'danger';
-  variant?:
-    | 'solid'
-    | 'bordered'
-    | 'light'
-    | 'flat'
-    | 'faded'
-    | 'shadow'
-    | 'ghost';
   className?: string;
-  onPress?: () => void;
   streched?: boolean;
   shadow?: boolean;
   external?: boolean;
-};
+} & ButtonProps;
 
 export const Button = ({
   icon,
   children,
   size = 'lg',
   streched,
-  color,
-  variant,
   className,
-  onPress,
   shadow,
   external,
+  ...restProps
 }: Props) => {
   return (
     <NativeButton
       fullWidth={streched}
-      onPress={onPress}
       size={size}
-      color={color}
-      variant={variant}
       className={`${shadow && 'shadow-base'} font-medium relative ${className}`}
+      {...restProps}
     >
       {icon}
       {children}
