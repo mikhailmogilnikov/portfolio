@@ -43,12 +43,8 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-const DynamicLightbox = dynamic(
-  () =>
-    import('@mikhailmogilnikov/widgets/lightbox').then((mod) => mod.Lightbox),
-  {
-    ssr: false,
-  },
+const DynamicLightbox = dynamic(() =>
+  import('@mikhailmogilnikov/widgets/lightbox').then((mod) => mod.Lightbox),
 );
 
 export default async function RootLayout({
