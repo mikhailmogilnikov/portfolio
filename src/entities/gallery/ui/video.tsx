@@ -5,6 +5,7 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
     <video
       loop
       autoPlay
+      playsInline
       muted
       controls={false}
       className='w-full h-full snap-start flex-shrink-0 object-cover'

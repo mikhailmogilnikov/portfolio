@@ -33,7 +33,7 @@
         "description": "Котик с микрофоном"
       },
       {
-        "url": "/assets/albomoni/images/shot2.png",
+        "url": "/assets/albomoni/images/shot2.webp",
         "type": "image",
         "aspect": "16/10",
         "description": "webp"
