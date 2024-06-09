@@ -91,22 +91,22 @@ export const LightboxWrapper = ({ children, image }: Props) => {
         {!!dragCount && dragCount < 2 && (
           <PiHandTap
             size={36}
-            className='opacity-30 absolute top-4 right-4 animate-pulse'
+            className='opacity-30 absolute top-4 right-4 animate-pulse z-30'
           />
         )}
       </m.div>
       <AnimatePresence>
-        {isDragging && dragCount && dragCount < 6 && (
+        {isDragging && dragCount && dragCount < 20 && (
           <m.div
-            initial={{ scale: 0, filter: 'blur(24px)', opacity: 0 }}
+            initial={{ scale: 0, filter: 'blur(24px)', opacity: 0, y: 16 }}
             animate={{
               scale: 1,
               filter: 'blur(0px)',
               opacity: 1,
-              transition: { delay: 0.2 },
+              y: 0,
             }}
-            exit={{ scale: 0, filter: 'blur(24px)', opacity: 0 }}
-            className='w-64 max-w-[98vw] h-16 bg-black border-1 border-divider rounded-full absolute bottom-4 z-30 origin-bottom flex items-center justify-center px-4 gap-3'
+            exit={{ scale: 0, filter: 'blur(24px)', opacity: 0, y: 16 }}
+            className='w-72 max-w-[98vw] h-20 bg-black border-1 border-divider rounded-full absolute bottom-4 z-30 origin-bottom flex items-center justify-center px-6 gap-4'
           >
             <PiArrowCircleDownBold
               size={36}
