@@ -85,7 +85,7 @@ export const LightboxWrapper = ({ children, image }: Props) => {
         onMouseUp={() => setIsDragging(false)}
         onTouchEnd={() => setIsDragging(false)}
         onDragEnd={handleDragEnd}
-        className='max-w-[92vw] max-h-[92vh] rounded-2xl bg-default z-20 cursor-grab shadow-base relative'
+        className='max-w-[92vw] max-h-[92vh] rounded-2xl bg-default z-20 cursor-grab shadow-base relative  overflow-clip border-1 border-separate'
       >
         {children}
         {!!dragCount && dragCount < 2 && (
@@ -106,7 +106,7 @@ export const LightboxWrapper = ({ children, image }: Props) => {
               transition: { delay: 0.2 },
             }}
             exit={{ scale: 0, filter: 'blur(24px)', opacity: 0 }}
-            className='w-64 max-w-[98vw] h-16 bg-primary rounded-full absolute bottom-4 z-30 origin-bottom flex items-center justify-center px-4 gap-3'
+            className='w-64 max-w-[98vw] h-16 bg-black border-1 border-divider rounded-full absolute bottom-4 z-30 origin-bottom flex items-center justify-center px-4 gap-3'
           >
             <PiArrowCircleDownBold
               size={36}

@@ -20,20 +20,31 @@
     "contribution": [],
     "preview": "",
     "gallery": [
-      { "url": "1", "aspect": "16/9" },
-      { "url": "2", "aspect": "1/1" },
-      { "url": "3", "aspect": "2/3" },
-      { "url": "4", "aspect": "3/2" },
-      { "url": "5", "aspect": "10/13" },
-      { "url": "6", "aspect": "3/4" },
-      { "url": "7", "aspect": "5/3" }
+      {
+        "url": "/assets/albomoni/images/shot1.png",
+        "type": "image",
+        "aspect": "16/10",
+        "description": "png"
+      },
+      {
+        "url": "/assets/albomoni/videos/video1.mp4",
+        "type": "video",
+        "aspect": "16/9",
+        "description": "Котик с микрофоном"
+      },
+      {
+        "url": "/assets/albomoni/images/shot2.png",
+        "type": "image",
+        "aspect": "16/10",
+        "description": "webp"
+      }
     ]
   },
   {
     "id": "minerals-museum",
     "name": "Минералогический музей",
     "short_description": "Справочник горных пород с 3D визуализацией.",
-    "href": "https://minerals-museum.vercel.app",
+    "href": "https://mineralsmuseum.vercel.app/",
     "github": "https://github.com/mikhailmogilnikov/minerals-museum",
     "technologies": [
       "Next.js",

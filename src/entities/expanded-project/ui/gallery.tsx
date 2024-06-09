@@ -15,7 +15,7 @@ export const ExpandedProjectGallery = ({ items }: Props) => {
   return (
     <Flex col tag='article' gap={2}>
       <Text tag='h2' className='text-2xl md:text-3xl font-semibold mt-4'>
-        Галерея. <span className='opacity-50'>Нажмите для увеличения</span>
+        Галерея. <span className='opacity-50'>Нажмите для увеличения.</span>
       </Text>
       <Gallery
         items={items}

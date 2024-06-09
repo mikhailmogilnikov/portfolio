@@ -9,7 +9,7 @@ export const Lightbox = () => {
 
   return (
     <AnimatePresence>
-      {gallery && <LightboxContent image={gallery[0]} />}
+      {gallery && <LightboxContent media={gallery[0]} />}
     </AnimatePresence>
   );
 };

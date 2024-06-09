@@ -37,8 +37,8 @@ export const Project = ({ data }: Props) => {
         >
           <Flex className='justify-between items-center'>
             <h3 className='text-2xl lg:text-3xl font-bold'>{data.name}</h3>
-            <div className='w-8 h-8 bg-default flex justify-center items-center rounded-full'>
-              <PiCaretRightBold size={20} />
+            <div className='w-8 h-8 lg:w-12 lg:h-12 bg-default flex justify-center items-center rounded-full'>
+              <PiCaretRightBold className='w-1/2 h-1/2' />
             </div>
           </Flex>
 

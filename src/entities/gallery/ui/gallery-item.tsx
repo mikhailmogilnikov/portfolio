@@ -3,6 +3,7 @@ import { AppendAnimation } from '@mikhailmogilnikov/shared/ui/(layout)/append-an
 import { useLightbox } from '@mikhailmogilnikov/shared/lib/hooks/use-lightbox';
 import { m } from 'framer-motion';
 import { Text } from '../../../shared/ui/(layout)/text';
+import { Media } from './media';
 
 type Props = {
   item: TGalleryItem;
@@ -22,10 +23,14 @@ export const GalleryItem = ({ item }: Props) => {
         <m.div
           layoutId={`${item.url}_item`}
           style={{ aspectRatio: aspect }}
-          className='w-full bg-default rounded-2xl'
-        />
+          className='w-full bg-default rounded-2xl relative shadow-base border-1 border-separate overflow-clip'
+        >
+          <Media media={item} />
+        </m.div>
         {description && (
-          <Text className='text-sm md:text-md font-medium'>{description}</Text>
+          <Text className='text-sm md:text-medium font-medium'>
+            {description}
+          </Text>
         )}
       </button>
     </AppendAnimation>
