@@ -8,9 +8,8 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
       playsInline
       muted
       controls={false}
+      src={url}
       className='w-full h-full snap-start flex-shrink-0 object-cover'
-    >
-      <source src={url} type='video/mp4' />
-    </video>
+    />
   );
 };

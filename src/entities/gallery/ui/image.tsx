@@ -11,7 +11,6 @@ export const GalleryImage = ({ url, description }: Props) => {
       fill
       draggable={false}
       unoptimized
-      priority
       className='snap-start flex-shrink-0 object-cover'
     />
   );
