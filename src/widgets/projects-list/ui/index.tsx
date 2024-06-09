@@ -1,7 +1,6 @@
 import { Project } from '@mikhailmogilnikov/entities/project';
 import { getProjects } from '@mikhailmogilnikov/shared/api/get-projects';
 import dynamic from 'next/dynamic';
-import { cookies } from 'next/headers';
 
 type Props = {
   lng: string;
@@ -15,7 +14,6 @@ const DynamicExpandedProject = dynamic(() =>
 );
 
 export const ProjectsList = async ({ lng, activeProject }: Props) => {
-  cookies();
   const projects = await getProjects(lng);
   const currentProject = projects.find(({ id }) => id === activeProject);
 

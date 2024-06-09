@@ -14,7 +14,7 @@ export const CloseButton = ({ className }: Props) => {
 
   const handleClick = useCallback(() => {
     if (isWithinPage) router.back();
-    else router.push('/');
+    else router.push('/', { scroll: false });
   }, [isWithinPage, router]);
 
   return (
