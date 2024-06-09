@@ -2,16 +2,14 @@
 
 import { useLightbox } from '@mikhailmogilnikov/shared/lib/hooks/use-lightbox';
 import { AnimatePresence } from 'framer-motion';
-import { RemoveScroll } from 'react-remove-scroll';
+import { LightboxContent } from './lightbox';
 
 export const Lightbox = () => {
   const { gallery } = useLightbox();
 
   return (
     <AnimatePresence>
-      {gallery && (
-        <RemoveScroll className='fixed inset-0 z-[100]'>fds</RemoveScroll>
-      )}
+      {gallery && <LightboxContent image={gallery[0]} />}
     </AnimatePresence>
   );
 };

@@ -3,8 +3,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { TGalleryItem } from '../../../shared/model/types/project.type';
 
-const initialState: { gallery: TGalleryItem[] | null } = {
+const initialState: {
+  gallery: TGalleryItem[] | null;
+  size: { width: 0; height: 0 };
+} = {
   gallery: null,
+  size: { width: 0, height: 0 },
 };
 
 const lightboxSlice = createSlice({
@@ -13,6 +17,9 @@ const lightboxSlice = createSlice({
   reducers: {
     setGallery: (state, { payload }) => {
       state.gallery = payload;
+    },
+    setSize: (state, { payload }) => {
+      state.size = payload;
     },
   },
 });

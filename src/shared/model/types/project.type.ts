@@ -1,3 +1,8 @@
+export type TMediaSize = {
+  width: number;
+  height: number;
+};
+
 export type TGalleryItem = {
   url: string;
   type: 'video' | 'image';

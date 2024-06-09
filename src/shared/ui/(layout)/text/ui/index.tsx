@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   className?: string;
   opacity?: number;
 };
