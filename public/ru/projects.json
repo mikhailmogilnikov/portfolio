@@ -18,7 +18,7 @@
     "description": "",
     "features": [],
     "contribution": [],
-    "preview": "",
+    "preview": "/assets/albomoni/videos/preview.webm",
     "gallery": [
       {
         "url": "/assets/albomoni/images/shot1.png",
@@ -37,6 +37,12 @@
         "type": "image",
         "aspect": "16/10",
         "description": "webp"
+      },
+      {
+        "url": "/assets/albomoni/videos/prev.mov",
+        "type": "video",
+        "aspect": "16/9",
+        "description": "mov"
       }
     ]
   },

@@ -5,6 +5,7 @@ import { RemoveScroll } from 'react-remove-scroll';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
+import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
@@ -32,7 +33,9 @@ export const ExpandedProject = ({ project }: Props) => {
             >
               <CloseButton className='fixed top-4 right-4 md:top-6 md:right-6' />
 
-              <div className='w-full h-[50vh] lg:h-[70vh]' />
+              <div className='w-full aspect-square md:aspect-[16/7]'>
+                {/* <Video url={project.preview} /> */}
+              </div>
 
               <ExpandedProjectTitle
                 id={project.id}

@@ -6,6 +6,7 @@ import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type'
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { PiCaretRightBold } from 'react-icons/pi';
 import { AppendAnimation } from '@mikhailmogilnikov/shared/ui/(layout)/append-animation';
+import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
 
 type Props = {
   data: ProjectType;
@@ -28,8 +29,10 @@ export const Project = ({ data }: Props) => {
       >
         <m.div
           layoutId={`${data.id}_wrapper`}
-          className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default shadow-base cursor-pointer relative z-10'
-        />
+          className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default shadow-base cursor-pointer relative z-10 overflow-clip'
+        >
+          <Video url={data.preview} />
+        </m.div>
 
         <m.div
           layoutId={`${data.id}_title`}
