@@ -37,12 +37,6 @@
         "type": "image",
         "aspect": "16/10",
         "description": "webp"
-      },
-      {
-        "url": "/assets/albomoni/videos/prev.mov",
-        "type": "video",
-        "aspect": "16/9",
-        "description": "mov"
       }
     ]
   },

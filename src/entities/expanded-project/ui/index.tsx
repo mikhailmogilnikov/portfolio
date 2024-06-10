@@ -5,7 +5,6 @@ import { RemoveScroll } from 'react-remove-scroll';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
-import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
