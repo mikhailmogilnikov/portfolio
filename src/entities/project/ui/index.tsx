@@ -31,7 +31,9 @@ export const Project = ({ data }: Props) => {
           layoutId={`${data.id}_wrapper`}
           className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default shadow-base cursor-pointer relative z-10 overflow-clip'
         >
-          <Video url={data.preview} />
+          <m.div className='w-full h-full' layout>
+            <Video url={data.preview} />
+          </m.div>
         </m.div>
 
         <m.div

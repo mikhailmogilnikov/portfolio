@@ -23,7 +23,7 @@ export const GalleryItem = ({ item }: Props) => {
         <m.div
           layoutId={`${item.url}_item`}
           style={{ aspectRatio: aspect }}
-          className='w-full bg-default rounded-2xl relative shadow-base border-1 border-separate overflow-clip'
+          className='w-full bg-default rounded-2xl relative shadow-base border-1 border-divider overflow-clip'
         >
           <Media media={item} />
         </m.div>

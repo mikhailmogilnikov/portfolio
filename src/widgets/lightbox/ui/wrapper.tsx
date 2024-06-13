@@ -85,7 +85,7 @@ export const LightboxWrapper = ({ children, image }: Props) => {
         onMouseUp={() => setIsDragging(false)}
         onTouchEnd={() => setIsDragging(false)}
         onDragEnd={handleDragEnd}
-        className='max-w-[92vw] max-h-[92vh] rounded-2xl bg-default z-20 cursor-grab shadow-base relative  overflow-clip border-1 border-separate'
+        className='max-w-[92vw] max-h-[92vh] rounded-2xl bg-default z-20 cursor-grab shadow-base relative  overflow-clip border-1 border-divider'
       >
         {children}
         {!!dragCount && dragCount < 2 && (
