@@ -112,7 +112,7 @@ export const Menu = () => {
         initial='hidden'
         animate={getAnimation()}
         variants={variants}
-        className='fixed w-16 aspect-square bottom-5 right-5 lg:bottom-10 lg:right-10  cursor-pointer rounded-full flex items-center justify-center outline outline-1 outline-white/25 z-50'
+        className='fixed w-16 aspect-square bottom-5 right-5 lg:bottom-10 lg:right-10 cursor-pointer rounded-full flex items-center justify-center outline outline-1 outline-white/25 z-50'
         onClick={handleOpened}
       >
         <m.div

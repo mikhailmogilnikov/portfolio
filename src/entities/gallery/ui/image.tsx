@@ -19,7 +19,7 @@ export const GalleryImage = ({ url, description, sizes, primary }: Props) => {
         fill
         sizes={sizes}
         draggable={false}
-        loading='lazy'
+        loading={!primary ? 'lazy' : 'eager'}
         priority={primary}
         onLoad={() => setIsLoaded(true)}
         className='absolute snap-start flex-shrink-0 object-cover z-10'

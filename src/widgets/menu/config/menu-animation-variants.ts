@@ -8,11 +8,11 @@ export const LightThemeMenuVariant = {
 } as const;
 
 export const DarkThemeMenuVariant = {
-  scale: 15,
+  scale: 10,
   opacity: 0.9,
   y: -100,
   filter: 'blur(10px)',
-  backgroundColor: 'rgba(0, 0, 0, 0)',
+  backgroundColor: 'rgba(0, 0, 0)',
   transition: { duration: 0.3 },
 } as const;
 

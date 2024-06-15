@@ -10,6 +10,7 @@ import {
 import dynamic from 'next/dynamic';
 import './globals.css';
 import Providers from './providers';
+import { MeshBackground } from '@mikhailmogilnikov/page/about/ui/background';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
