@@ -7,6 +7,7 @@ import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
 import dynamic from 'next/dynamic';
+import { Spinner } from '@nextui-org/spinner';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
@@ -17,8 +18,9 @@ type Props = {
   project: ProjectType | undefined;
 };
 
-const DynamicExpandedProjectGallery = dynamic(() =>
-  import('./gallery').then((mod) => mod.ExpandedProjectGallery),
+const DynamicExpandedProjectGallery = dynamic(
+  () => import('./gallery').then((mod) => mod.ExpandedProjectGallery),
+  { loading: () => <Spinner /> },
 );
 
 export const ExpandedProject = ({ project }: Props) => {
