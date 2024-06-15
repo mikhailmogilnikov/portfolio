@@ -3,9 +3,12 @@ import { Skeleton } from '@nextui-org/skeleton';
 import Image from 'next/image';
 import { useState } from 'react';
 
-type Props = Pick<TGalleryItem, 'url' | 'description'> & { sizes: string };
+type Props = Pick<TGalleryItem, 'url' | 'description'> & {
+  sizes: string;
+  primary?: boolean;
+};
 
-export const GalleryImage = ({ url, description, sizes }: Props) => {
+export const GalleryImage = ({ url, description, sizes, primary }: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
@@ -17,6 +20,7 @@ export const GalleryImage = ({ url, description, sizes }: Props) => {
         sizes={sizes}
         draggable={false}
         loading='lazy'
+        priority={primary}
         onLoad={() => setIsLoaded(true)}
         className='absolute snap-start flex-shrink-0 object-cover z-10'
       />
