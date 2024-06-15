@@ -10,12 +10,13 @@ type Props = Pick<TGalleryItem, 'url' | 'description'> & {
 
 export const GalleryImage = ({ url, description, sizes, primary }: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   return (
     <>
       {!isLoaded && <Skeleton className='w-full h-full' />}
       <Image
         src={url}
-        alt={description as string}
+        alt={description || 'gallery image'}
         fill
         sizes={sizes}
         draggable={false}
