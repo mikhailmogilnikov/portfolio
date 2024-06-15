@@ -6,22 +6,16 @@ import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type'
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
-import dynamic from 'next/dynamic';
-import { Spinner } from '@nextui-org/spinner';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
 import { ActionButtons } from './action-buttons';
 import { TechnologiesList } from './technologies';
+import { ExpandedProjectGallery } from './gallery';
 
 type Props = {
   project: ProjectType | undefined;
 };
-
-const DynamicExpandedProjectGallery = dynamic(
-  () => import('./gallery').then((mod) => mod.ExpandedProjectGallery),
-  { loading: () => <Spinner /> },
-);
 
 export const ExpandedProject = ({ project }: Props) => {
   return (
@@ -64,7 +58,7 @@ export const ExpandedProject = ({ project }: Props) => {
                 <ActionButtons href={project.href} github={project.github} />
                 <TechnologiesList technologies={project.technologies} />
                 <ExpandedProjectTimeInfo />
-                <DynamicExpandedProjectGallery items={project.gallery} />
+                <ExpandedProjectGallery items={project.gallery} />
               </m.section>
             </Flex>
           </m.div>
