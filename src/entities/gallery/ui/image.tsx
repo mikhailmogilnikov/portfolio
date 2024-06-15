@@ -9,6 +9,7 @@ export const GalleryImage = ({ url, description }: Props) => {
       src={url}
       alt={description as string}
       fill
+      placeholder='blur'
       draggable={false}
       loading='lazy'
       className='snap-start flex-shrink-0 object-cover'
