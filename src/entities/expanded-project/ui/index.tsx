@@ -6,16 +6,20 @@ import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type'
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
+import dynamic from 'next/dynamic';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
-import { ExpandedProjectGallery } from './gallery';
 import { ActionButtons } from './action-buttons';
 import { TechnologiesList } from './technologies';
 
 type Props = {
   project: ProjectType | undefined;
 };
+
+const DynamicExpandedProjectGallery = dynamic(() =>
+  import('./gallery').then((mod) => mod.ExpandedProjectGallery),
+);
 
 export const ExpandedProject = ({ project }: Props) => {
   return (
@@ -37,7 +41,7 @@ export const ExpandedProject = ({ project }: Props) => {
 
               <m.div
                 layoutId={`${project.id}_wrapper`}
-                className='w-full bg-default rounded-2xl overflow-clip shadow-base aspect-square md:aspect-[16/9] my-6 mt-8'
+                className='w-full bg-default rounded-2xl overflow-clip shadow-base aspect-square md:aspect-[16/9] my-6 mt-12'
               >
                 <Video url={project.preview} />
               </m.div>
@@ -58,7 +62,7 @@ export const ExpandedProject = ({ project }: Props) => {
                 <ActionButtons href={project.href} github={project.github} />
                 <TechnologiesList technologies={project.technologies} />
                 <ExpandedProjectTimeInfo />
-                <ExpandedProjectGallery items={project.gallery} />
+                <DynamicExpandedProjectGallery items={project.gallery} />
               </m.section>
             </Flex>
           </m.div>

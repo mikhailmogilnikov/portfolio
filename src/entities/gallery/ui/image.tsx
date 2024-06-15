@@ -10,7 +10,7 @@ export const GalleryImage = ({ url, description }: Props) => {
       alt={description as string}
       fill
       draggable={false}
-      unoptimized
+      loading='lazy'
       className='snap-start flex-shrink-0 object-cover'
     />
   );

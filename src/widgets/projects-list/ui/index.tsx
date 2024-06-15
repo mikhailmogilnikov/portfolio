@@ -1,18 +1,12 @@
+import { ExpandedProject } from '@mikhailmogilnikov/entities/expanded-project';
 import { Project } from '@mikhailmogilnikov/entities/project';
 import { getProjects } from '@mikhailmogilnikov/shared/api/get-projects';
-import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
 type Props = {
   lng: string;
   activeProject: string | undefined;
 };
-
-const DynamicExpandedProject = dynamic(() =>
-  import('@mikhailmogilnikov/entities/expanded-project').then(
-    (mod) => mod.ExpandedProject,
-  ),
-);
 
 export const ProjectsList = async ({ lng, activeProject }: Props) => {
   cookies();
@@ -25,7 +19,7 @@ export const ProjectsList = async ({ lng, activeProject }: Props) => {
         <Project key={project.id} data={project} />
       ))}
 
-      <DynamicExpandedProject project={currentProject} />
+      <ExpandedProject project={currentProject} />
     </div>
   );
 };

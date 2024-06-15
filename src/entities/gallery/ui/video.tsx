@@ -9,7 +9,7 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
         autoPlay
         playsInline
         muted
-        preload='auto'
+        preload='none'
         controls={false}
         src={url}
         className='absolute w-full h-full snap-start flex-shrink-0 object-cover z-10'
