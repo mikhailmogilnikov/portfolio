@@ -1,3 +1,5 @@
+import { SocialsPage } from '@mikhailmogilnikov/page/socials/ui';
+
 type Props = {
   params: {
     lng: string;
@@ -5,5 +7,5 @@ type Props = {
 };
 
 export default function Socials({ params: { lng } }: Props) {
-  return <>Socials Page</>;
+  return <SocialsPage />;
 }
