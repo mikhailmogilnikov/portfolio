@@ -9,7 +9,6 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
 
   useEffect(() => {
     const videoElement = ref.current;
-    console.log(url, isInView);
 
     if (!videoElement) return;
 
