@@ -7,6 +7,7 @@ import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { PiCaretRightBold } from 'react-icons/pi';
 import { AppendAnimation } from '@mikhailmogilnikov/shared/ui/(layout)/append-animation';
 import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
+import { useEffect } from 'react';
 
 type Props = {
   data: ProjectType;
@@ -15,6 +16,10 @@ type Props = {
 export const Project = ({ data }: Props) => {
   const pathname = usePathname();
   const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(`${pathname}?project=${data.id}`);
+  }, []);
 
   const handleExpand = () => {
     router.push(`${pathname}?project=${data.id}`, { scroll: false });
