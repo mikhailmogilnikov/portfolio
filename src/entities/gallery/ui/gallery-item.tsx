@@ -7,9 +7,10 @@ import { Media } from './media';
 
 type Props = {
   item: TGalleryItem;
+  imgSizes: string;
 };
 
-export const GalleryItem = ({ item }: Props) => {
+export const GalleryItem = ({ item, imgSizes }: Props) => {
   const { setGallery } = useLightbox();
   const { aspect, description } = item;
 
@@ -25,7 +26,7 @@ export const GalleryItem = ({ item }: Props) => {
           style={{ aspectRatio: aspect }}
           className='w-full bg-default rounded-2xl relative shadow-base border-1 border-divider overflow-clip'
         >
-          <Media media={item} />
+          <Media media={item} imgSizes={imgSizes} />
         </m.div>
         {description && (
           <Text className='text-sm md:text-medium font-medium'>

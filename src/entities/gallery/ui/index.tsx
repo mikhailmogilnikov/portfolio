@@ -14,7 +14,11 @@ export const Gallery = ({ items, className, gap, columns }: Props) => {
     <ResponsiveMasonry columnsCountBreakPoints={{ 1: 1, 200: 2, 900: 3 }}>
       <Masonry gutter={gap} columnsCount={columns} className={className}>
         {items.map((item) => (
-          <GalleryItem key={item.url} item={item} />
+          <GalleryItem
+            key={item.url}
+            item={item}
+            imgSizes='(max-width: 200px) 100vw, (max-width: 900px) 50vw, 33vw'
+          />
         ))}
       </Masonry>
     </ResponsiveMasonry>
