@@ -24,7 +24,7 @@ export const SocialsPage = () => {
         </Button>
       </Flex>
 
-      <section className='flex gap-8 items-center justify-center flex-col md:flex-row'>
+      <section className='flex md:gap-8 items-center justify-center flex-col md:flex-row'>
         <MeshBackground />
 
         <m.button
@@ -47,7 +47,7 @@ export const SocialsPage = () => {
               damping: 3,
             },
           }}
-          className='w-56 aspect-square bg-gradient-to-tr from-zinc-950 to-zinc-700 rounded-full flex items-center justify-center'
+          className='w-[40vw] md:w-56 max-md:mr-[35vw] aspect-square bg-gradient-to-tr from-zinc-950 to-zinc-700 rounded-full flex items-center justify-center'
         >
           <PiGithubLogoBold className='text-white w-1/2 h-1/2' />
         </m.button>
@@ -71,7 +71,7 @@ export const SocialsPage = () => {
               damping: 3,
             },
           }}
-          className='w-56 aspect-square bg-gradient-to-tr from-indigo-400 to-sky-500 rounded-full flex items-center justify-center md:mt-36'
+          className='w-[40vw] md:w-56 max-md:ml-[35vw] aspect-square bg-gradient-to-tr from-indigo-400 to-sky-500 rounded-full flex items-center justify-center md:mt-36'
         >
           <PiTelegramLogoBold className='text-white w-1/2 h-1/2' />
         </m.button>
@@ -95,7 +95,7 @@ export const SocialsPage = () => {
               damping: 3,
             },
           }}
-          className='w-56 aspect-square bg-gradient-to-tr from-blue-500 to-blue-700 rounded-full flex items-center justify-center'
+          className='w-[40vw] md:w-56 max-md:mr-[35vw] aspect-square bg-gradient-to-tr from-blue-500 to-blue-700 rounded-full flex items-center justify-center'
         >
           <SlSocialVkontakte className='text-white w-1/2 h-1/2' />
         </m.button>
