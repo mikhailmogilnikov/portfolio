@@ -7,10 +7,12 @@ import {
   fallbackLng,
   languages,
 } from '@mikhailmogilnikov/shared/i18n/settings';
-import dynamic from 'next/dynamic';
-import './globals.css';
-import Providers from './providers';
 import { MeshBackground } from '@mikhailmogilnikov/entities/mesh-bg';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import './globals.css';
+
+import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
@@ -59,7 +61,10 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers lng={lng}>
-          <MeshBackground />
+          <Suspense>
+            <MeshBackground />
+          </Suspense>
+
           <DynamicLightbox />
           <main className='w-full h-min min-h-screen flex flex-col gap-12 md:gap-20 items-center p-4 md:p-8 py-10 md:py-12 xl:py-24 !pb-40 max-w-8xl mx-auto overflow-x-hidden'>
             {children}
