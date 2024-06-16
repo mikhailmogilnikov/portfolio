@@ -2,6 +2,12 @@
 
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import {
+  DarkGradientColors,
+  LightGradientColors,
+} from '../config/gradient-colors';
 
 const DynamicMeshBackground = dynamic(() =>
   import('@mikhailmogilnikov/shared/ui/gradient-bg').then(
@@ -11,21 +17,28 @@ const DynamicMeshBackground = dynamic(() =>
 
 export const MeshBackground = () => {
   const { resolvedTheme } = useTheme();
+  const searchParams = useSearchParams();
 
-  const colors =
-    resolvedTheme === 'light'
-      ? {
-          color1: '#fff',
-          color2: '#aaa',
-          color3: '#bbb',
-          color4: '#ccc',
-        }
-      : {
-          color1: '#000',
-          color2: '#111',
-          color3: '#222',
-          color4: '#333',
-        };
+  const [isMountable, setIsMountable] = useState(false);
+  const [colors, setColors] = useState(DarkGradientColors);
 
-  return <DynamicMeshBackground colors={colors} />;
+  useEffect(() => {
+    const project = searchParams.get('project');
+
+    if (project) {
+      setIsMountable(false);
+    } else {
+      setIsMountable(true);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (resolvedTheme === 'light') {
+      setColors(LightGradientColors);
+    } else {
+      setColors(DarkGradientColors);
+    }
+  }, [resolvedTheme]);
+
+  return isMountable && <DynamicMeshBackground colors={colors} />;
 };

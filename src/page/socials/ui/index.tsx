@@ -1,6 +1,5 @@
 'use client';
 
-import { MeshBackground } from '@mikhailmogilnikov/entities/mesh-bg';
 import { Button } from '@mikhailmogilnikov/shared/ui/(buttons)/button';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { m } from 'framer-motion';
@@ -25,8 +24,6 @@ export const SocialsPage = () => {
       </Flex>
 
       <section className='flex md:gap-8 items-center justify-center flex-col md:flex-row'>
-        <MeshBackground />
-
         <m.button
           onClick={() =>
             window.open('https://github.com/mikhailmogilnikov', '_blank')

@@ -5,7 +5,7 @@ import { TbPhotoVideo } from 'react-icons/tb';
 
 export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
   const ref = useRef<HTMLVideoElement>(null);
-  const isInView = useInView(ref, { margin: '60px' });
+  const isInView = useInView(ref, { margin: '20px' });
 
   useEffect(() => {
     const videoElement = ref.current;

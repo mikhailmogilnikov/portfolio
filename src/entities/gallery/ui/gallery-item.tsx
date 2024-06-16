@@ -29,7 +29,10 @@ export const GalleryItem = ({ item, imgSizes }: Props) => {
           <Media media={item} imgSizes={imgSizes} />
         </m.div>
         {description && (
-          <Text className='text-sm md:text-medium font-medium'>
+          <Text
+            className='text-sm md:text-medium font-medium text-start'
+            opacity={0.8}
+          >
             {description}
           </Text>
         )}
