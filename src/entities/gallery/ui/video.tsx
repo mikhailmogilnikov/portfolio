@@ -1,11 +1,11 @@
 import { TGalleryItem } from '@mikhailmogilnikov/shared/model/types/project.type';
-import { useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { TbPhotoVideo } from 'react-icons/tb';
 
 export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
   const ref = useRef<HTMLVideoElement>(null);
-  const isInView = useInView(ref, { margin: '20px' });
+  const isInView = useInView(ref);
 
   useEffect(() => {
     const videoElement = ref.current;
@@ -21,15 +21,17 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
 
   return (
     <div className='w-full h-full relative flex items-center justify-center'>
-      <video
+      <m.video
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         ref={ref}
         loop
-        autoPlay
+        autoPlay={false}
         playsInline
         muted
         preload='none'
         controls={false}
-        src={isInView ? url : ''}
+        src={url}
         className='absolute w-full h-full snap-start flex-shrink-0 object-cover z-10'
       />
       <TbPhotoVideo className='animate-pulse z-0 w-1/4 h-1/4' />
