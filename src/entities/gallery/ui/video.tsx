@@ -12,7 +12,7 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
 
   useEffect(() => {
     const handleCanPlayThrough = () => {
-      console.log('Видео полностью загружено и готово к воспроизведению!');
+      setIsLoaded(true);
     };
 
     const videoElement = ref.current;
