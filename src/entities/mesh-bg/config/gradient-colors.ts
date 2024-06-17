@@ -1,8 +1,8 @@
 export const LightGradientColors = {
   color1: '#fff',
   color2: '#aaa',
-  color3: '#bbb',
-  color4: '#ccc',
+  color3: '#a3a3a3',
+  color4: '#f5f5f7',
 };
 
 export const DarkGradientColors = {
