@@ -1,7 +1,7 @@
 import { ExpandedProject } from '@mikhailmogilnikov/entities/expanded-project';
 import { Project } from '@mikhailmogilnikov/entities/project';
-import { getProjects } from '@mikhailmogilnikov/shared/api/get-projects';
 import { cookies } from 'next/headers';
+import { getProjects } from '../api/get-projects';
 
 type Props = {
   lng: string;

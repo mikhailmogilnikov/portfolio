@@ -22,7 +22,7 @@ const config: Config = {
       },
       animation: {
         preloaderPulse: 'preloadPulse 2s linear infinite',
-        appear: 'appear linear',
+        appear: 'enter 1s cubic-bezier(0,1,0,1)',
       },
       maxWidth: {
         '8xl': '1440px',
@@ -35,6 +35,10 @@ const config: Config = {
           '0%': { opacity: '0.09' },
           '50%': { opacity: '0.14' },
           '100%': { opacity: '0.09' },
+        },
+        enter: {
+          '0%': { opacity: '0', transform: 'translateY(100px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },

@@ -1,3 +1,5 @@
+'use client';
+
 import { TGalleryItem } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { Skeleton } from '@nextui-org/skeleton';
 import Image from 'next/image';
@@ -10,7 +12,7 @@ type Props = Pick<TGalleryItem, 'url' | 'description'> & {
 
 export const GalleryImage = ({ url, description, sizes, primary }: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  
+
   return (
     <>
       {!isLoaded && <Skeleton className='w-full h-full' />}

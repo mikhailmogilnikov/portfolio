@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ansara",
+    "name": "Веб-студия Ansara",
+    "role": "Фронтенд разработчик",
+    "year": "2024",
+    "image": "/assets/companies/ansara.png",
+    "link": "https://ansara.ru/"
+  },
+  {
+    "id": "lampu",
+    "name": "Стартап Lampu",
+    "role": "Фронтенд разработчик",
+    "year": "2024",
+    "image": "/assets/companies/lampu.png",
+    "link": "https://lampu.store/"
+  },
+  {
+    "id": "mgri",
+    "name": "Университет МГРИ",
+    "role": "Фронтенд разработчик",
+    "year": "2023-2024",
+    "image": "/assets/companies/mgri.svg",
+    "link": "https://mgri.ru/"
+  }
+]
