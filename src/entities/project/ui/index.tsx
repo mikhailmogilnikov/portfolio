@@ -32,7 +32,7 @@ export const Project = ({ data }: Props) => {
     >
       <m.div
         layoutId={`${data.id}_wrapper`}
-        className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default shadow-base cursor-pointer relative z-10 overflow-clip'
+        className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default/50 backdrop-blur-lg shadow-base cursor-pointer relative z-10 overflow-clip'
       >
         <m.div className='w-full h-full' layout>
           <Video url={data.preview} />
@@ -45,9 +45,8 @@ export const Project = ({ data }: Props) => {
       >
         <Flex className='justify-between items-center'>
           <h3 className='text-2xl lg:text-3xl font-bold'>{data.name}</h3>
-          <div className='w-8 h-8 lg:w-12 lg:h-12 bg-default/50 flex justify-center items-center rounded-full'>
-            <PiCaretRightBold className='w-1/2 h-1/2' />
-          </div>
+
+          <PiCaretRightBold className='w-6 h-6 mt-1 md:w-8 md:h-8'  />
         </Flex>
 
         <p className='md:text-lg font-medium opacity-50'>

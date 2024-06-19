@@ -24,9 +24,7 @@ export const ExperienceItem = ({ item }: Props) => {
           </Text>
         </Flex>
       </Flex>
-      <div className='w-10 h-10 rounded-full bg-default/50 flex items-center justify-center shadow-base flex-shrink-0'>
-        <PiCaretRightBold size={20} />
-      </div>
+      <PiCaretRightBold size={24} />
     </Link>
   );
 };

@@ -37,8 +37,8 @@ const config: Config = {
           '100%': { opacity: '0.09' },
         },
         enter: {
-          '0%': { opacity: '0', transform: 'translateY(100px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { opacity: '0', transform: 'translateY(100px)', filter: 'blur(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0px)' },
         },
       },
     },

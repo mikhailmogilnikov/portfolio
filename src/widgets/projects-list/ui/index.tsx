@@ -14,7 +14,7 @@ export const ProjectsList = async ({ lng, activeProject }: Props) => {
   const currentProject = projects.find(({ id }) => id === activeProject);
 
   return (
-    <div className='w-full h-min flex flex-col gap-16 xl:gap-24'>
+    <div className='w-full h-min flex flex-col gap-16 xl:gap-24 animate-appear'>
       {projects.map((project) => (
         <Project key={project.id} data={project} />
       ))}

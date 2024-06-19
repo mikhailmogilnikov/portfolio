@@ -31,10 +31,14 @@ export const Video = ({ url }: Pick<TGalleryItem, 'url'>) => {
 
     if (!videoElement) return;
 
-    if (isInView) {
-      videoElement.play();
-    } else {
-      videoElement.pause();
+    try {
+      if (isInView) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+    } catch {
+      return;
     }
   }, [isInView]);
 
