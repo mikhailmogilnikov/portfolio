@@ -5,7 +5,7 @@ import { PiArrowSquareOutBold, PiCaretRightBold } from 'react-icons/pi';
 
 export const AboutActions = () => {
   return (
-    <Flex col className='mt-4'>
+    <Flex col className='mt-8'>
       <Link href='/contact' className='flex gap-3'>
         <Text className='text-xl font-semibold'>Связаться со мной</Text>
         <PiCaretRightBold size={22} className='mt-[3px]' />

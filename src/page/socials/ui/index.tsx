@@ -1,26 +1,16 @@
 'use client';
 
-import { Button } from '@mikhailmogilnikov/shared/ui/(buttons)/button';
+import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { m } from 'framer-motion';
-import { useRouter } from 'next/navigation';
-import {
-  PiCaretLeftBold,
-  PiGithubLogoBold,
-  PiTelegramLogoBold,
-} from 'react-icons/pi';
+import { PiGithubLogoBold, PiTelegramLogoBold } from 'react-icons/pi';
 import { SlSocialVkontakte } from 'react-icons/sl';
 
 export const SocialsPage = () => {
-  const { push } = useRouter();
-
   return (
     <>
-      <Flex>
-        <Button onPress={() => push('/')} radius='full' className='shadow-base'>
-          <PiCaretLeftBold size={22} />
-          На главную
-        </Button>
+      <Flex className='items-center'>
+        <CloseButton />
       </Flex>
 
       <section className='flex md:gap-8 items-center justify-center flex-col md:flex-row'>

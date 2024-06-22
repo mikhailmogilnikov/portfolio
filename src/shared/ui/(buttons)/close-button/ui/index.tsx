@@ -1,3 +1,5 @@
+'use client';
+
 import { useOriginContext } from '@mikhailmogilnikov/shared/lib/providers';
 import { Button } from '@nextui-org/button';
 import { useRouter } from 'next/navigation';

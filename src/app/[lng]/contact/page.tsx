@@ -1,3 +1,5 @@
+import { ContactPage } from '@mikhailmogilnikov/page/contact';
+
 type Props = {
   params: {
     lng: string;
@@ -5,5 +7,5 @@ type Props = {
 };
 
 export default function Contact({ params: { lng } }: Props) {
-  return <>Contact Page</>;
+  return <ContactPage />;
 }
