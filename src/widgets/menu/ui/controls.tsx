@@ -278,6 +278,7 @@ export const MenuControls = ({ setIsOpened }: Props) => {
                       </m.button>
                       <m.button
                         id='en'
+                        disabled
                         className={clsx('font-medium text-end', {
                           'opacity-50': i18n.language !== 'en',
                         })}

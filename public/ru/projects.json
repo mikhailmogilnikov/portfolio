@@ -18,7 +18,7 @@
     "description": "",
     "features": [],
     "contribution": [],
-    "preview": "/assets/albomoni/videos/preview.mp4",
+    "preview": "/assets/albomoni/videos/albomoni.mp4",
     "gallery": [
       {
         "url": "/assets/albomoni/videos/location_modal.mp4",
@@ -99,7 +99,7 @@
         "url": "/assets/albomoni/images/menu-desktop.png",
         "type": "image",
         "aspect": "2606/1444",
-        "description": "Адаптация меню по десктопную версию"
+        "description": "Адаптация меню под десктопную версию"
       },
       {
         "url": "/assets/albomoni/videos/place-ad.mp4",
@@ -128,7 +128,7 @@
     "description": "",
     "features": [],
     "contribution": [],
-    "preview": "/assets/minerals-museum/videos/preview.mp4",
+    "preview": "/assets/minerals-museum/videos/previe.mp4",
     "gallery": []
   }
 ]

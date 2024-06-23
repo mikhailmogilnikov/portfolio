@@ -1,11 +1,12 @@
 'use client';
 
-import { AnimatePresence, m } from 'framer-motion';
+import { AnimatePresence, PanInfo, m } from 'framer-motion';
 import { RemoveScroll } from 'react-remove-scroll';
 import { ProjectType } from '@mikhailmogilnikov/shared/model/types/project.type';
 import { CloseButton } from '@mikhailmogilnikov/shared/ui/(buttons)/close-button/ui';
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { Video } from '@mikhailmogilnikov/entities/gallery/ui/video';
+import { useRouter } from 'next/navigation';
 import { ExpandedProjectSectionVariants } from '../config/animation-variants';
 import { ExpandedProjectTitle } from './title';
 import { ExpandedProjectTimeInfo } from './time-info';
@@ -18,6 +19,14 @@ type Props = {
 };
 
 export const ExpandedProject = ({ project }: Props) => {
+  const { back } = useRouter();
+
+  const handlePan = (_: PointerEvent, info: PanInfo) => {
+    if (info.offset.y > 100) {
+      back();
+    }
+  };
+
   return (
     <AnimatePresence>
       {project && (
@@ -37,6 +46,7 @@ export const ExpandedProject = ({ project }: Props) => {
 
               <m.div
                 layoutId={`${project.id}_wrapper`}
+                onPanEnd={handlePan}
                 className='w-full bg-default rounded-2xl overflow-clip shadow-base aspect-square md:aspect-[16/9] my-6 mt-12'
               >
                 <Video url={project.preview} />

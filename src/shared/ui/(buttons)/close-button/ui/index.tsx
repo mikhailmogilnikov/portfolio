@@ -21,7 +21,7 @@ export const CloseButton = ({ className }: Props) => {
 
   return (
     <Button
-      className={`w-10 h-10 lg:w-14 lg:h-14 bg-default rounded-full z-50 shadow-base flex items-center justify-center ${className}`}
+      className={`w-10 h-10 lg:w-14 lg:h-14 bg-default/50 backdrop-blur-lg rounded-full z-50 shadow-base flex items-center justify-center ${className}`}
       type='button'
       aria-label='close'
       isIconOnly

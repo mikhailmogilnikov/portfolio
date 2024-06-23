@@ -59,9 +59,9 @@ export const ContactForm = () => {
             window.open('https://t.me/mikhailmogilnikov', '_blank')
           }
         >
-          Telegram.
+          Telegram,
         </button>
-        <span className='opacity-50'> Или заполнив форму ниже:</span>
+        <span className='opacity-50'> или заполнив форму ниже:</span>
       </Text>
       <Flex col gap={6} className='max-md:-mt-2'>
         <input
