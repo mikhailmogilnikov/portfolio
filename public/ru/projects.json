@@ -129,6 +129,93 @@
     "features": [],
     "contribution": [],
     "preview": "/assets/minerals-museum/videos/mineral-museum.mp4",
-    "gallery": []
+    "gallery": [
+      {
+        "url": "/assets/minerals-museum/videos/tabs.MOV",
+        "type": "video",
+        "aspect": "1280/592",
+        "description": "Навигация"
+      },
+      {
+        "url": "/assets/minerals-museum/images/edit-categories.jpeg",
+        "type": "image",
+        "aspect": "1280/1262",
+        "description": "Страница изменения категорий"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/carousel.MOV",
+        "type": "video",
+        "aspect": "1920/928"
+      },
+      {
+        "url": "/assets/minerals-museum/images/story.jpeg",
+        "type": "image",
+        "aspect": "1280/1037",
+        "description": "Страница истории просмотров"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/search.MOV",
+        "type": "video",
+        "aspect": "1920/1184",
+        "description": "Поиск и меню"
+      },
+      {
+        "url": "/assets/minerals-museum/images/footer.jpeg",
+        "type": "image",
+        "aspect": "1184/460"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/mineral.MOV",
+        "type": "video",
+        "aspect": "1920/1184",
+        "description": "Cтраница экспоната"
+      },
+      {
+        "url": "/assets/minerals-museum/images/categories.jpeg",
+        "type": "image",
+        "aspect": "1280/799",
+        "description": "Страница всех категорий"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/card.MOV",
+        "type": "video",
+        "aspect": "1280/848"
+      },
+      {
+        "url": "/assets/minerals-museum/images/modal.jpeg",
+        "type": "image",
+        "aspect": "998/618",
+        "description": "Пример модального окна"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/swiper.MOV",
+        "type": "video",
+        "aspect": "816/848"
+      },
+      {
+        "url": "/assets/minerals-museum/images/preview.jpeg",
+        "type": "image",
+        "aspect": "1078/1252",
+        "description": "Предпросмотр в создании нового экспоната"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/explore.MOV",
+        "type": "video",
+        "aspect": "1920/1168",
+        "description": "Раздел исследования"
+      },
+      {
+        "url": "/assets/minerals-museum/images/category.jpeg",
+        "type": "image",
+        "aspect": "1280/799",
+        "description": "Страница категории"
+      },
+      {
+        "url": "/assets/minerals-museum/videos/watched.MOV",
+        "type": "video",
+        "aspect": "1280/1024",
+        "description": "История просмотров"
+      }
+    ]
   }
 ]
