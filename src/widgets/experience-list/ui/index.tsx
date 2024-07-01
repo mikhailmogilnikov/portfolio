@@ -1,8 +1,8 @@
 import { Flex } from '@mikhailmogilnikov/shared/ui/(layout)/flex';
 import { Text } from '@mikhailmogilnikov/shared/ui/(layout)/text';
-import { cookies } from 'next/headers';
 import { Divider } from '@nextui-org/divider';
 import { Fragment } from 'react';
+import { cookies } from 'next/headers';
 import { getExperience } from '../api/get-experience';
 import { ExperienceItem } from './experience-item';
 

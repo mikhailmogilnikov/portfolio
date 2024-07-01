@@ -7,7 +7,7 @@ type Props = {
   lng: string;
 };
 
-export const AboutPage = ({ lng }: Props) => {
+export const AboutPage = async ({ lng }: Props) => {
   return (
     <Flex tag='section' className='max-w-6xl animate-appear' col gap={20}>
       <AboutMe />

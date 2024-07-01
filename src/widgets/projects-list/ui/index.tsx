@@ -1,6 +1,5 @@
 import { ExpandedProject } from '@mikhailmogilnikov/entities/expanded-project';
 import { Project } from '@mikhailmogilnikov/entities/project';
-import { cookies } from 'next/headers';
 import { getProjects } from '../api/get-projects';
 
 type Props = {
@@ -9,7 +8,6 @@ type Props = {
 };
 
 export const ProjectsList = async ({ lng, activeProject }: Props) => {
-  cookies();
   const projects = await getProjects(lng);
   const currentProject = projects.find(({ id }) => id === activeProject);
 

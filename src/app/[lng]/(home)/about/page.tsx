@@ -6,6 +6,6 @@ type Props = {
   };
 };
 
-export default function About({ params: { lng } }: Props) {
+export default async function About({ params: { lng } }: Props) {
   return <AboutPage lng={lng} />;
 }
