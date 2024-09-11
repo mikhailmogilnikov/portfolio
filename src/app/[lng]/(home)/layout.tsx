@@ -1,4 +1,5 @@
 import { HomePage } from '@mikhailmogilnikov/page/home';
+import { cookies } from 'next/headers';
 
 type Props = {
   params: {
@@ -8,5 +9,6 @@ type Props = {
 };
 
 export default function HomeLayout({ params: { lng }, children }: Props) {
+  cookies();
   return <HomePage lng={lng}>{children}</HomePage>;
 }

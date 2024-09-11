@@ -32,7 +32,7 @@ export const Project = ({ data }: Props) => {
     >
       <m.div
         layoutId={`${data.id}_wrapper`}
-        className='w-full aspect-square md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default/50 backdrop-blur-lg shadow-base cursor-pointer relative z-10 overflow-clip'
+        className='w-full aspect-[3/2] md:aspect-video max-h-[90vh] rounded-2xl lg:rounded-3xl bg-default/50 backdrop-blur-lg shadow-base cursor-pointer relative z-10 overflow-clip'
       >
         <m.div className='w-full h-full' layout>
           <Video url={data.preview} />

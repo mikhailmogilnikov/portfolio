@@ -47,7 +47,7 @@ export const ExpandedProject = ({ project }: Props) => {
               <m.div
                 layoutId={`${project.id}_wrapper`}
                 onPanEnd={handlePan}
-                className='w-full bg-default rounded-2xl overflow-clip shadow-base aspect-square md:aspect-[16/9] my-6 mt-12'
+                className='w-full bg-default rounded-2xl overflow-clip shadow-base aspect-[3/2] md:aspect-[16/9] my-2 mt-12'
               >
                 <Video url={project.preview} />
               </m.div>

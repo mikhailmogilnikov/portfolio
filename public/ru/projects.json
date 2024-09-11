@@ -1,5 +1,50 @@
 [
   {
+    "id": "pharm-vision",
+    "name": "Pharm Vision",
+    "short_description": "Аггрегатор кешбека для фарм-компаний.",
+    "href": "https://pharm-vision.vercel.app/promotion/r-pharm",
+    "github": "https://github.com/mikhailmogilnikov/pharm-vision",
+    "technologies": [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Zustand",
+      "Framer Motion",
+      "NextUI",
+      "FSD (Feature Sliced Design)"
+    ],
+    "year": 2024,
+    "dev_months": 4,
+    "description": "",
+    "features": [],
+    "contribution": [],
+    "preview": "/assets/pharm-vision/videos/preview.webm",
+    "gallery": []
+  },
+  {
+    "id": "ansara-erp",
+    "name": "Ansara ERP",
+    "short_description": "Система учета клиентов и проектов для веб-студии.",
+    "href": "https://ansara-erp.vercel.app/",
+    "github": "https://github.com/mikhailmogilnikov/ansara-erp",
+    "technologies": [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Zustand",
+      "Framer Motion",
+      "FSD (Feature Sliced Design)"
+    ],
+    "year": 2024,
+    "dev_months": 4,
+    "description": "",
+    "features": [],
+    "contribution": [],
+    "preview": "/assets/ansara-erp/videos/preview.webm",
+    "gallery": []
+  },
+  {
     "id": "albomoni",
     "name": "Albomoni",
     "short_description": "Сервис размещения объявлений, аналог Avito для зарубежных стран.",

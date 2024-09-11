@@ -12,6 +12,10 @@ type Props = {
 export const ExpandedProjectGallery = ({ items }: Props) => {
   const isMobile = useMedia('(max-width: 900px)', true);
 
+  if (items.length === 0) {
+    return null;
+  }
+
   return (
     <Flex col tag='article' gap={2}>
       <Text tag='h2' className='text-2xl md:text-3xl font-semibold mt-4'>
