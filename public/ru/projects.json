@@ -2,7 +2,7 @@
   {
     "id": "pharm-vision",
     "name": "Pharm Vision",
-    "short_description": "Аггрегатор кешбека для фарм-компаний.",
+    "short_description": "Агрегатор кешбека для фарм-компаний.",
     "href": "https://pharm-vision.vercel.app/promotion/r-pharm",
     "github": "https://github.com/mikhailmogilnikov/pharm-vision",
     "technologies": [
@@ -20,7 +20,105 @@
     "features": [],
     "contribution": [],
     "preview": "/assets/pharm-vision/videos/preview.webm",
-    "gallery": []
+    "gallery": [
+      {
+        "url": "/assets/pharm-vision/videos/search.MOV",
+        "type": "video",
+        "aspect": "848/784"
+      },
+      {
+        "url": "/assets/pharm-vision/images/pw-themes.webp",
+        "type": "image",
+        "aspect": "1/1",
+        "description": "Изменяемые акцентные цвета приложения"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/tabs.MP4",
+        "type": "video",
+        "aspect": "848/640"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/qr.MP4",
+        "type": "video",
+        "aspect": "688/1280",
+        "description": "Анимация сканера QR-кодов"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/text.MOV",
+        "type": "video",
+        "aspect": "848/336",
+        "description": "Анимация переливания цвета"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/text-counter.MP4",
+        "type": "video",
+        "aspect": "704/848",
+        "description": "Анимация счётчика"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/preload.MP4",
+        "type": "video",
+        "aspect": "720/1280",
+        "description": "Мгновенный отклик (Loaders)"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/slider.MP4",
+        "type": "video",
+        "aspect": "816/1280"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/success.MP4",
+        "type": "video",
+        "aspect": "704/1280"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/themes.MP4",
+        "type": "video",
+        "aspect": "720/1280"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/modals.MP4",
+        "type": "video",
+        "aspect": "704/1280",
+        "description": "Модальное окно с функцией смаха вниз для закрытия"
+      },
+      {
+        "url": "/assets/pharm-vision/images/withdraw.webp",
+        "type": "image",
+        "aspect": "1179/1887",
+        "description": "Страница вывода бонусов"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/help.MP4",
+        "type": "video",
+        "aspect": "704/1280",
+        "description": "Страница поддержки"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/back.MP4",
+        "type": "video",
+        "aspect": "640/1280",
+        "description": "Всплывающая кнопка 'Назад' внизу экрана"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/brand.MP4",
+        "type": "video",
+        "aspect": "688/1280",
+        "description": "Страница бренда"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/password.MP4",
+        "type": "video",
+        "aspect": "816/848",
+        "description": "Проверка надёжности пароля"
+      },
+      {
+        "url": "/assets/pharm-vision/videos/mask.MP4",
+        "type": "video",
+        "aspect": "688/1280",
+        "description": "Маска в поле ввода"
+      }
+    ]
   },
   {
     "id": "ansara-erp",
