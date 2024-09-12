@@ -16,7 +16,7 @@ export const AboutActions = () => {
         <PiCaretRightBold size={22} className='mt-[3px]' />
       </Link>
 
-      <Link href='/socials' className='flex gap-3'>
+      <Link target='_blank' href='/assets/resume.pdf' className='flex gap-3'>
         <Text className='text-xl font-semibold'>Открыть резюме</Text>
         <PiArrowSquareOutBold size={22} className='mt-[3px]' />
       </Link>
